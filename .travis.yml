@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "14.1.0"
+script:
+  - echo "deploying!"
+install:
+  - npm install --save-dev expo-cli
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN #--only hosting
