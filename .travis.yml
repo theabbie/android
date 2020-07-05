@@ -4,6 +4,6 @@ node_js:
 script:
   - echo "deploying!"
 install:
-  - npm install && expo upgrade --non-interactive && npx expo login --non-interactive -u abbie
+  - npm install && expo upgrade --non-interactive && npm install --save-dev expo-cli && npx expo login --non-interactive -u abbie
 after_success:
   - expo build:android --non-interactive
